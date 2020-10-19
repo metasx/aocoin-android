@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.noober.background.view.BLTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/word_tv"
+    android:layout_width="match_parent"
+    android:layout_height="39dp"
+    android:gravity="center"
+    android:textColor="@color/qmui_config_color_white"
+    android:textSize="14sp"
+    app:bl_corners_radius="19.5dp"
+    app:bl_solid_color="#2E3546"
+    tools:text="内容" />

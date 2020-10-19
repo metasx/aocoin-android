@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.noober.background.view.BLTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/copy_btn"
+    android:layout_width="38dp"
+    android:layout_height="17dp"
+    android:layout_marginStart="10dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:text="@string/copy"
+    android:textColor="#7F9DA2"
+    android:textSize="10sp"
+    app:bl_corners_radius="9.5dp"
+    app:bl_solid_color="#27303E" />

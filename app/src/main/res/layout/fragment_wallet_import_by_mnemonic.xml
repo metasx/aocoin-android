@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_topbar" />
+
+    <RelativeLayout
+        android:id="@+id/des_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar_layout"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp">
+
+        <TextView
+            android:id="@+id/des_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_mnemonic_input"
+            android:textColor="@color/qmui_config_color_white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_below="@+id/des_tv"
+            android:layout_alignStart="@+id/des_tv"
+            android:layout_alignEnd="@+id/des_tv"
+            android:layout_marginTop="8dp"
+            android:background="@color/button_secondary" />
+
+    </RelativeLayout>
+
+    <com.noober.background.view.BLEditText
+        android:id="@+id/input_et"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/des_layout"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:gravity="start|top"
+        android:hint="@string/wallet_mnemonic_input_comments"
+        android:paddingStart="20dp"
+        android:paddingTop="26dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="26dp"
+        android:textColor="@color/color_text_grey"
+        android:textColorHint="@color/color_text_grey"
+        android:textSize="14sp"
+        app:bl_corners_radius="4dp"
+        app:bl_solid_color="#1A1B25" />
+
+    <include
+        layout="@layout/include_secondary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="34dp" />
+
+    <LinearLayout
+        android:id="@+id/keyboard_place_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

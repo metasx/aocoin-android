@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackg</item>
+        <item name="app_content_bg_color">@color/app_content_bg_color</item>
+
+        <!--Activity动画-->
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+
+        <!--QMUITopBar-->
+        <item name="qmui_topbar_height">45dp</item>
+        <item name="QMUITopBarStyle">@style/QDTopBar</item>
+        <item name="qmui_skin_support_topbar_bg">@color/topbar_bg_color</item>
+
+        <!--TipDialog-->
+        <item name="qmui_skin_support_dialog_bg">@drawable/tip_dialog_bg</item>
+        <item name="qmui_tip_dialog_padding_vertical">8dp</item>
+
+        <!--QMUITabSegment-->
+        <item name="qmui_skin_support_tab_normal_color">@color/bottom_tab_normal_color</item>
+        <item name="qmui_skin_support_tab_selected_color">@color/bottom_tab_selected_color</item>
+
+        <!-- QMUIPopups-->
+        <item name="qmui_skin_support_popup_bg">@color/qmui_config_color_transparent</item>
+
+        <!-- QMUIBottomSheet-->
+        <item name="qmui_bottom_sheet_max_width">1000dp</item>
+    </style>
+
+    <!--Activity动画-->
+    <style name="AnimationActivity" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:activityOpenEnterAnimation">@anim/h_fragment_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/h_fragment_pop_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/h_fragment_pop_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/h_fragment_exit</item>
+    </style>
+
+    <!-- TopBar配置 -->
+    <style name="QDTopBar" parent="QMUI.TopBar">
+        <item name="qmui_topbar_title_color">@color/topbar_title_color</item>
+        <item name="qmui_topbar_subtitle_color">@color/topbar_subtitle_color</item>
+        <item name="qmui_topbar_height">45dp</item>
+        <item name="qmui_topbar_image_btn_width">40dp</item>
+        <item name="qmui_topbar_image_btn_height">40dp</item>
+        <item name="qmui_topbar_left_back_drawable_id">@mipmap/ic_topbar_back</item>
+        <item name="qmui_topbar_title_text_size">18sp</item>
+        <item name="qmui_topbar_text_btn_color_state_list">@color/topbar_btn_color</item>
+        <item name="qmui_topbar_text_btn_text_size">12sp</item>
+        <item name="qmui_bottomDividerHeight">0dp</item>
+    </style>
+
+    <style name="FormInputTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/qmui_config_color_white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FormInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:background">@drawable/common_dark_input_bg</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:textColor">@color/qmui_config_color_white</item>
+        <item name="android:textColorHint">#6D778B</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:gravity">start|center</item>
+    </style>
+
+    <style name="PasswordNoticeLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="PasswordNoticePoint">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:background">@drawable/round_red</item>
+    </style>
+
+    <style name="PasswordNoticeText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textColor">@color/color_red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="PolicyLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">26dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="PolicyText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_text_grey</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PolicyPoint">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">@drawable/round_gray</item>
+        <item name="android:layout_marginEnd">7dp</item>
+    </style>
+
+    <!--底部弹窗动画-->
+    <style name="BottomDialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+</resources>

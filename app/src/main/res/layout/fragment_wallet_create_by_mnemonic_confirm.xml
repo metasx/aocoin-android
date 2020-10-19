@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_topbar" />
+
+    <com.noober.background.view.BLRelativeLayout
+        android:id="@+id/selected_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:layout_below="@+id/topbar_layout"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="18dp"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="15dp"
+        app:bl_corners_radius="4dp"
+        app:bl_solid_color="#1A202E">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selected_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notice_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wallet_verify_mnemonic_msg"
+            android:textColor="#6D778B"
+            android:textSize="14sp" />
+
+    </com.noober.background.view.BLRelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selected_info_layout"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp" />
+
+    <include
+        layout="@layout/include_secondary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
+
+</RelativeLayout>

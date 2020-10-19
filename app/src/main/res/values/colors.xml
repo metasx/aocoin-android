@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#060C0B</color>
+    <color name="colorPrimaryDark">#111622</color>
+    <color name="colorAccent">#F66463</color>
+    <color name="windowBackg">#05060A</color>
+    <color name="colorControlNormal">#6D778B</color>
+    <color name="navigationColor">#111622</color>
+    <color name="colorBlankBg">#000000</color>
+
+    <color name="color_gray_text">#757575</color>
+    <color name="color_text_grey">#6D778B</color>
+
+    <color name="color_content_bg">#1A1B25</color>
+
+    <!--页面背景色-->
+    <color name="app_content_bg_color">#060C0B</color>
+
+    <!--标题栏-->
+    <color name="topbar_bg_color">#0A0A15</color>
+    <color name="topbar_title_color">#FFFFFF</color>
+    <color name="topbar_subtitle_color">#FFFFFF</color>
+    <color name="topbar_btn_color">#FFFFFF</color>
+
+    <!--底部导航栏-->
+    <color name="bottom_tab_background_color">#0B0F17</color>
+    <color name="bottom_tab_normal_color">#FFFFFF</color>
+    <color name="bottom_tab_selected_color">#14D2B8</color>
+
+    <!--Button-->
+    <color name="button_primary">#F84F73</color>
+    <color name="button_secondary">#14D2B8</color>
+    <color name="button_disable">#636A69</color>
+
+    <color name="color_red">#F66463</color>
+    <color name="color_text_white">#FFFFFF</color>
+
+    <!--ListView-->
+    <color name="list_divider">#05060A</color>
+
+    <!--钱包相关页面-->
+    <color name="wallet_switch_kind_item_selected_bg">#FFFFFF</color>
+    <color name="wallet_switch_kind_item_unselected_bg">#F5F7FD</color>
+
+    <color name="wallet_management_kind_item_selected_bg">#0A0A15</color>
+    <color name="wallet_management_kind_item_unselected_bg">#1A1B25</color>
+
+    <color name="wallet_switch_kind_view_bg">#f6f7fe</color>
+    <color name="wallet_management_kind_view_bg">#1A1B25</color>
+
+    <color name="wallet_switch_wallet_view_bg">#FFFFFF</color>
+    <color name="wallet_management_wallet_view_bg">#1a1b25</color>
+
+    <color name="wallet_switch_space_view_bg">#FFFFFF</color>
+    <color name="wallet_management_space_view_bg">#060C0B</color>
+
+    <color name="wallet_switch_header_view_bg">#FFFFFF</color>
+    <color name="wallet_management_header_view_bg">#1A1B25</color>
+
+    <!--钱包管理钱包Item-->
+    <color name="wallet_switch_wallet_item_selected_bg">#1A1B25</color>
+    <color name="wallet_switch_wallet_item_unselected_bg">#FFFFFF</color>
+
+    <color name="wallet_management_wallet_item_bg">#262736</color>
+
+    <color name="wallet_switch_wallet_item_selected_stroke">#1A1B25</color>
+    <color name="wallet_switch_wallet_item_unselected_stroke">#D8DBE4</color>
+
+    <color name="wallet_switch_wallet_item_selected_address_tv_color">#D8DBE4</color>
+    <color name="wallet_switch_wallet_item_unselected_address_tv_color">#111622</color>
+
+    <color name="wallet_management_wallet_item_selected_address_tv_color">#D8DBE4</color>
+
+    <color name="c_93">#939393</color>
+
+</resources>

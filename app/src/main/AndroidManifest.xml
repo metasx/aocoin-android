@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aocoin.wallet">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".CoreApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--开屏-->
+        <activity
+            android:name=".pages.startup.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".pages.main.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!--用户引导-->
+        <activity
+            android:name=".pages.wallet.WalletGuideActivity"
+            android:screenOrientation="portrait" />
+
+        <!--二维码扫描-->
+        <activity
+            android:name=".pages.common.ScanActivity"
+            android:screenOrientation="portrait" />
+
+        <!--添加钱包-->
+        <activity
+            android:name=".pages.wallet.WalletAddActivity"
+            android:screenOrientation="portrait" />
+
+        <!--钱包管理-->
+        <activity
+            android:name=".pages.wallet.WalletManagementActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".pages.trade.TransferActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".pages.trade.TransferConfirmActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".pages.trade.TransferResultActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

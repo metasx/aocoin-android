@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+def dbflow_version = "4.2.4"
+def kotlinx_coroutines_version = '1.3.3'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.aocoin.wallet"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.android.support:multidex:1.0.1'
+
+    // 以太坊开发库
+    implementation 'org.web3j:core:4.2.0-android'
+
+    // bitcoinj
+    implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+
+    // Fragment管理
+    // https://github.com/YoKeyword/Fragmentation/blob/master/README_CN.md
+    implementation 'me.yokeyword:fragmentationx:1.0.2'
+
+    // QMUI
+    // https://github.com/Tencent/QMUI_Android
+    implementation 'com.qmuiteam:qmui:2.0.0-alpha10'
+
+    // https://github.com/airbnb/lottie-android
+    implementation 'com.airbnb.android:lottie:3.4.1'
+
+    // 无需创建Shape.xml 直接在属性里设置效果
+    // https://github.com/JavaNoober/BackgroundLibrary
+    implementation 'com.noober.background:core:1.6.5'
+
+    // DBFlow
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    kapt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-kotlinextensions:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
+
+    // 助记词
+    // https://novacrypto.github.io/BIP39/
+    implementation 'io.github.novacrypto:BIP39:2019.01.27'
+
+    // 下拉刷新控件
+    // https://github.com/scwang90/SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+
+    // RecyclerView 多类型适配器
+    // https://github.com/drakeet/MultiType
+    implementation 'me.drakeet.multitype:multitype:3.4.4'
+
+    // 权限管理
+    // https://github.com/afollestad/assent#using-results
+    implementation 'com.afollestad.assent:core:3.0.0-RC4'
+
+    // 二维码扫描
+    // https://github.com/bingoogolapple/BGAQRCode-Android
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.7'
+
+    // 图片选择
+    // https://github.com/bingoogolapple/BGAPhotoPicker-Android
+    implementation 'cn.bingoogolapple:bga-photopicker:2.0.2'
+    implementation 'cn.bingoogolapple:bga-baseadapter:2.0.0@aar'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    // Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version"
+    // Kotlin Coroutines Android
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_version"
+
+}

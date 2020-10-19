@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_topbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/secondary_btn"
+        android:layout_below="@+id/topbar_layout">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/FormInputTitle"
+                    android:text="@string/wallet_name_input_title" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name_et"
+                    style="@style/FormInput"
+                    android:layout_width="match_parent"
+                    android:hint="@string/wallet_name_input_hint"
+                    android:maxLength="5" />
+
+            </LinearLayout>
+
+            <!--新密码-->
+            <LinearLayout
+                android:id="@+id/password_et_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/FormInputTitle"
+                    android:text="@string/wallet_password_input_title" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/password_et"
+                    style="@style/FormInput"
+                    android:layout_width="match_parent"
+                    android:hint="@string/wallet_password_input_hint"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_input_notice_layout" />
+
+            <!--确认新密码密码-->
+            <LinearLayout
+                android:id="@+id/confirm_password_et_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/FormInputTitle"
+                    android:text="@string/wallet_confirm_password_input_title" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/confirm_password_et"
+                    style="@style/FormInput"
+                    android:layout_width="match_parent"
+                    android:hint="@string/wallet_confirm_password_input_hint"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/include_secondary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="34dp" />
+
+    <LinearLayout
+        android:id="@+id/keyboard_place_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_topbar" />
+
+    <cn.bingoogolapple.qrcode.zxing.ZXingView
+        android:id="@+id/zxing_view"
+        style="@style/MatchMatch"
+        android:layout_below="@+id/topbar_layout"
+        app:qrcv_animTime="1000"
+        app:qrcv_barcodeRectHeight="120dp"
+        app:qrcv_borderColor="@color/button_secondary"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/button_secondary"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_isAutoZoom="true"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isOnlyDecodeScanBoxArea="false"
+        app:qrcv_isShowDefaultGridScanLineDrawable="true"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isShowLocationPoint="true"
+        app:qrcv_isShowTipBackground="false"
+        app:qrcv_isShowTipTextAsSingleLine="false"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="#33FFFFFF"
+        app:qrcv_qrCodeTipText="@string/qr_code_scan_tip"
+        app:qrcv_rectWidth="266dp"
+        app:qrcv_scanLineColor="@color/button_secondary"
+        app:qrcv_tipTextSize="14sp"
+        app:qrcv_toolbarHeight="56dp"
+        app:qrcv_topOffset="100dp"
+        app:qrcv_verticalBias="-1" />
+</RelativeLayout>

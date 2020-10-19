@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Topbar左侧钱包名称View-->
+    <item name="topbar_right_wallet_name_view" type="id" />
+
+    <!--Topbar右侧相册按钮-->
+    <item name="topbar_right_album_btn" type="id" />
+
+    <!--Topbar右侧扫描按钮-->
+    <item name="topbar_right_scan_btn" type="id" />
+
+    <!--Topbar左侧设置按钮-->
+    <item name="topbar_left_set_iv" type="id" />
+
+    <!--Topbar右侧关闭按钮-->
+    <item name="topbar_right_close_iv" type="id" />
+
+    <!--Topbar左侧删除钱包图标-->
+    <item name="topbar_right_delete_wallet_iv" type="id" />
+
+    <!--Topbar右侧保存按钮-->
+    <item name="topbar_right_save_btn" type="id" />
+
+</resources>

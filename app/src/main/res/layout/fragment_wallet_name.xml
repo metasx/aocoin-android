@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_topbar" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/name_et"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_content_bg"
+        android:gravity="start|top"
+        android:hint="@string/input_limit_5"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textColor="@color/qmui_config_color_white"
+        android:textColorHint="#6D778B"
+        android:textSize="13sp" />
+</LinearLayout>

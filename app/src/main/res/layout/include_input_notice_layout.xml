@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/input_notice_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <LinearLayout style="@style/PasswordNoticeLayout">
+
+        <TextView
+            android:id="@+id/notice_uppercase_point_tv"
+            style="@style/PasswordNoticePoint" />
+
+        <TextView
+            android:id="@+id/notice_uppercase_tv"
+            style="@style/PasswordNoticeText"
+            android:text="@string/wallet_notice_uppercase" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/PasswordNoticeLayout">
+
+        <TextView
+            android:id="@+id/notice_lowercase_point_tv"
+            style="@style/PasswordNoticePoint" />
+
+        <TextView
+            android:id="@+id/notice_lowercase_tv"
+            style="@style/PasswordNoticeText"
+            android:text="@string/wallet_notice_lowercase" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/PasswordNoticeLayout">
+
+        <TextView
+            android:id="@+id/notice_number_point_tv"
+            style="@style/PasswordNoticePoint" />
+
+        <TextView
+            android:id="@+id/notice_number_tv"
+            style="@style/PasswordNoticeText"
+            android:text="@string/wallet_notice_number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/PasswordNoticeLayout"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/notice_length_point_tv"
+            style="@style/PasswordNoticePoint" />
+
+        <TextView
+            android:id="@+id/notice_length_tv"
+            style="@style/PasswordNoticeText"
+            android:text="@string/wallet_notice_length" />
+
+    </LinearLayout>
+</LinearLayout>
