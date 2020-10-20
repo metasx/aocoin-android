@@ -12,12 +12,11 @@ import com.aocoin.wallet.service.polkaSendTransfer
 import com.aocoin.wallet.utils.checkFastClick
 import com.aocoin.wallet.utils.showFailedTip
 import com.aocoin.wallet.utils.showWalletPasswordDialog
-import kotlinx.android.synthetic.main.activity_transfer_confirm_new.*
+import kotlinx.android.synthetic.main.activity_transfer_confirm.*
 import kotlinx.android.synthetic.main.fragment_wallet_switch.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
-import org.json.JSONObject
 
 /**
  * @FileName: TransferConfirmActivity
@@ -39,7 +38,7 @@ class TransferConfirmActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_transfer_confirm_new)
+        setContentView(R.layout.activity_transfer_confirm)
         EventBus.getDefault().register(this)
     }
 
@@ -90,17 +89,15 @@ class TransferConfirmActivity : BaseActivity() {
         loadingDialog?.show()
         // 转账会广播
         polkaSendTransfer(address = address,
-            localType = localType,
             toAddress = toAddress,
             amount = amount,
             coinPrecision = coinPrecision,
             onSuccess = { resultBody ->
                 dismissLoadingDialog()
-                val bodyObj = JSONObject(resultBody)
-                val transferState = bodyObj.optBoolean("result")
-                val blockHash = bodyObj.optString("blockHash")
-                val txId = bodyObj.optString("hash") ?: "--"
-                val errorMsg = bodyObj.optString("errorMsg") ?: "--"
+                val transferState = resultBody.optBoolean("result")
+                val blockHash = resultBody.optString("blockHash")
+                val txId = resultBody.optString("hash") ?: "--"
+                val errorMsg = resultBody.optString("errorMsg") ?: "--"
                 // 打开交易结果页面，显示交易是否成功
                 val intent = Intent(this, TransferResultActivity::class.java)
                 intent.putExtra("transfer_state", transferState)

@@ -14,10 +14,7 @@ import com.aocoin.wallet.utils.SharedPrefKt
 import com.aocoin.wallet.utils.Utils
 import kotlinx.android.synthetic.main.activity_transfer_result.*
 import kotlinx.android.synthetic.main.include_topbar.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 /**
  * @FileName: TransferResultActivity

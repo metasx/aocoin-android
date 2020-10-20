@@ -39,8 +39,8 @@ fun polkaIsActivateAddress(
     转账，包含构建交易、签名交易、广播
  */
 fun polkaSendTransfer(
-    address: String, localType: Int, toAddress: String, amount: String, coinPrecision: Int,
-    onSuccess: (resultBody: String) -> Unit, onFail: (errMsg: String) -> Unit
+    address: String, toAddress: String, amount: String, coinPrecision: Int,
+    onSuccess: (resultBody: JSONObject) -> Unit, onFail: (errMsg: String) -> Unit
 ) {
     val param = JSONObject()
     val txInfo = JSONObject()
@@ -66,7 +66,7 @@ fun polkaSendTransfer(
         Logger.d("POLKA_SEND_TX return = $data")
         val resultObj = JSONObject(data.toString())
         if (resultObj.optBoolean("success")) {
-            onSuccess(resultObj.optJSONObject("body").toString())
+            onSuccess(resultObj.optJSONObject("body"))
         } else {
             onFail(resultObj.optString("errorMsg"))
         }
